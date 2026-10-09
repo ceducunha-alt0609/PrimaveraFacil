@@ -4,12 +4,13 @@
   "short_name": "Primavera",
   "description": "Guia de boas-vindas para moradores do Condomínio Edifício Primavera",
   "lang": "pt-BR",
-  "start_url": "./index.html",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#f7f1e7",
   "theme_color": "#071428",
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "./icons/icon-192.png",

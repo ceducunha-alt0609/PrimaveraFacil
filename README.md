@@ -1,31 +1,39 @@
-# Primavera Fácil — PWA
+# Primavera Fácil — PWA para GitHub Pages
 
-Projeto do guia de boas-vindas do Condomínio Edifício Primavera, preparado para publicação no GitHub Pages e instalação como aplicativo (PWA).
+Este pacote contém o guia de boas-vindas preparado para instalação como aplicativo no Android/Chrome e iPhone/Safari.
 
-## Arquivos
-- `index.html`: aplicação principal.
-- `manifest.json`: nome, cores, modo de exibição e ícones da instalação.
-- `service-worker.js`: cache básico dos arquivos do app shell para abrir o conteúdo previamente carregado quando estiver offline.
-- `icons/`: ícones PNG para instalação.
-- `primavera_facil_mobile_v13_premium_original.html`: cópia do HTML original enviado, para referência/backup.
+## Arquivos obrigatórios
+- `index.html` — aplicação principal.
+- `manifest.json` — nome, ícones, cores e configuração de instalação.
+- `service-worker.js` — cache básico para abrir a aplicação já carregada quando estiver offline.
+- `icons/` — ícones PNG de 192×192 e 512×512, incluindo versão maskable.
+- `primavera_facil_mobile_v13_premium_original.html` — cópia de referência do HTML original.
 
-## Publicar no GitHub Pages
-1. Crie um repositório no GitHub, por exemplo `primavera-facil`.
-2. Envie todos os arquivos e pastas deste pacote para a raiz do repositório (não envie somente o `index.html`).
-3. No repositório, abra **Settings → Pages**.
-4. Em **Build and deployment**, escolha **Deploy from a branch**, selecione `main` e a pasta `/ (root)`, e salve.
-5. Aguarde a publicação e abra a URL HTTPS fornecida pelo GitHub Pages.
+## Publicar corretamente
+1. Extraia este ZIP no computador.
+2. No GitHub, abra o repositório do Primavera Fácil e envie **o conteúdo da pasta `primavera-facil-pwa`**, preservando a pasta `icons`.
+3. Confirme que estes endereços abrem sem erro, substituindo `SEU-USUARIO` e `SEU-REPOSITORIO`:
+   - `https://SEU-USUARIO.github.io/SEU-REPOSITORIO/`
+   - `https://SEU-USUARIO.github.io/SEU-REPOSITORIO/manifest.json`
+   - `https://SEU-USUARIO.github.io/SEU-REPOSITORIO/service-worker.js`
+   - `https://SEU-USUARIO.github.io/SEU-REPOSITORIO/icons/icon-192.png`
+   - `https://SEU-USUARIO.github.io/SEU-REPOSITORIO/icons/icon-512.png`
+4. Em **Settings → Pages**, selecione `Deploy from a branch`, branch `main` e pasta `/(root)`. Aguarde a publicação HTTPS.
+5. Abra o endereço do site no Chrome do Android (não o arquivo HTML local nem a página do repositório GitHub).
 
-## Instalar no celular
-- **Android/Chrome:** abra a URL publicada; use o menu do navegador e escolha **Instalar app** ou **Adicionar à tela inicial**, conforme a opção exibida.
-- **iPhone/Safari:** abra a URL; toque em **Compartilhar → Adicionar à Tela de Início**.
+## Se o Chrome continuar mostrando “Não foi possível instalar”
+1. Confirme que todos os endereços acima abrem, especialmente os dois ícones e `manifest.json`.
+2. No Chrome, abra o site, toque no ícone ao lado do endereço → **Configurações do site** → **Armazenamento** → **Limpar dados** (o nome exato pode variar). Reabra o site com internet.
+3. Atualize a página. Aguarde alguns segundos para o Service Worker ser registrado e tente novamente pelo menu ⋮ → **Instalar app** ou **Adicionar à tela inicial**.
+4. Se houver uma instalação antiga do Primavera Fácil, remova-a antes de tentar novamente.
+5. Se falhar, envie a URL pública do GitHub Pages e uma captura da mensagem. Com a URL posso verificar se os arquivos publicados correspondem aos caminhos do projeto.
 
-## Importante
-- O PWA precisa ser servido por HTTPS (o GitHub Pages fornece HTTPS) ou em `localhost` durante testes para o Service Worker funcionar.
-- O checklist e o tema são salvos no armazenamento local do navegador. Eles **não sincronizam** entre aparelhos e podem ser perdidos se os dados do navegador forem apagados.
-- O cache offline é básico: recursos e páginas do app shell são armazenados após a primeira carga. Para garantir disponibilidade offline dos PDFs, coloque os PDFs na raiz do projeto com os nomes esperados e inclua-os no cache, se necessário.
-- O HTML faz referência a `guia_morador_primavera15.pdf` e `regulamento_interno_primavera_2015.pdf`. Esses documentos não estavam no arquivo recebido; adicione-os à raiz do repositório para que os links funcionem.
-- Faça uma revisão das informações internas e contatos antes de publicar. O conteúdo atual inclui orientações e dados de contato do condomínio.
+## Instalação
+- Android: Chrome → menu ⋮ → **Instalar app** ou **Adicionar à tela inicial**.
+- iPhone: Safari → Compartilhar → **Adicionar à Tela de Início**.
 
-## Teste local
-Abra o projeto por um servidor local (não apenas clicando duas vezes no HTML) para testar instalação e Service Worker. Uma opção é usar a extensão Live Server do VS Code.
+## Limitações conhecidas
+- O checklist e o tema ficam salvos no armazenamento local do navegador e não sincronizam entre aparelhos.
+- O cache offline é básico; o site precisa ser carregado uma vez com internet para guardar os arquivos.
+- O HTML faz referência a `guia_morador_primavera15.pdf` e `regulamento_interno_primavera_2015.pdf`. Esses PDFs não estavam no arquivo recebido; adicione-os à raiz do repositório para que os links funcionem.
+- Revise contatos e regras do condomínio antes de tornar o site acessível publicamente.
