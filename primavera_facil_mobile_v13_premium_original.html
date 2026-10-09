@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#071428" />
+<meta name="description" content="Primavera Fácil - Guia de boas-vindas para novos moradores do Condomínio Edifício Primavera" />
+<title>Primavera Fácil | V13 Premium</title>
+<style>
+:root{
+  --bg:#f7f1e7; --bg2:#fffaf2; --card:#fffdf8; --text:#102033; --muted:#657084;
+  --gold:#c8922a; --gold2:#f7d77e; --blue:#071428; --blue2:#0c2345; --line:rgba(16,32,51,.12);
+  --ok:#138a63; --warn:#c47b19; --danger:#be3a34; --shadow:0 16px 42px rgba(10,20,35,.13);
+  --radius:24px; --safe-bottom:env(safe-area-inset-bottom,0px); --nav-h:86px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth} body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:linear-gradient(145deg,var(--bg),#edf3f7);color:var(--text);min-height:100vh;overflow-x:hidden;padding-bottom:calc(var(--nav-h) + var(--safe-bottom) + 12px)}
+body.dark{--bg:#030a14;--bg2:#071428;--card:rgba(12,30,58,.86);--text:#f8efd9;--muted:#b7c0ca;--line:rgba(245,208,120,.18);background:radial-gradient(circle at top,#173050 0,#071428 45%,#020813 100%)}
+.app{max-width:540px;margin:0 auto;min-height:100vh;position:relative}.hidden{display:none!important}
+.hero{position:sticky;top:0;z-index:70;overflow:hidden;border-radius:0 0 34px 34px;background:linear-gradient(135deg,#061121,#0c2345 58%,#17345d);color:white;padding:24px 18px 20px;box-shadow:0 20px 50px rgba(3,10,20,.35)}
+.hero:before{content:"";position:absolute;right:-70px;top:-80px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,var(--gold2),transparent 68%);opacity:.35}.hero:after{content:"";position:absolute;left:-70px;bottom:-80px;width:190px;height:190px;border-radius:50%;background:radial-gradient(circle,#2ea7ff,transparent 70%);opacity:.16}
+.toprow{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{display:flex;gap:12px;align-items:center;min-width:0}.logo{width:54px;height:54px;border-radius:18px;background:linear-gradient(145deg,var(--gold2),var(--gold),#704704);display:grid;place-items:center;color:#071428;font-weight:900;font-size:22px;box-shadow:0 12px 30px rgba(200,146,42,.35);flex:0 0 auto}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:#f5d078;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.brand h1{font-family:Georgia,serif;font-size:24px;line-height:1;margin:3px 0 0}.iconbtn{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.10);color:white;border-radius:16px;width:44px;height:44px;font-size:20px;backdrop-filter:blur(10px)}
+.hero p{position:relative;z-index:1;margin:14px 0 0;color:#dfeaf5;line-height:1.44}.hero-actions{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.compact-hero .quick{min-height:auto}.quick{border:1px solid rgba(245,208,120,.22);background:rgba(255,255,255,.10);border-radius:18px;padding:12px;min-height:82px;color:white;text-decoration:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.12)}.quick b{display:block;font-size:14px}.quick small{display:block;color:#d9e5f2;margin-top:5px;line-height:1.3}
+.wrap{padding:16px}.searchbox{position:sticky;top:8px;z-index:12;background:rgba(255,253,248,.90);backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:22px;box-shadow:0 12px 32px rgba(10,20,35,.12);display:flex;align-items:center;gap:10px;padding:11px 14px;margin-bottom:14px}.dark .searchbox{background:rgba(7,20,40,.86)}.searchbox input{border:0;outline:0;background:transparent;width:100%;font-size:15px;color:var(--text)}
+.section-title{display:flex;align-items:end;justify-content:space-between;margin:22px 2px 10px}.section-title h2{font-family:Georgia,serif;margin:0;font-size:22px}.section-title span{font-size:12px;color:var(--muted)}
+.card{scroll-margin-top:96px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;margin:12px 0}.card h3{margin:0 0 9px;font-size:17px;display:flex;align-items:center;gap:9px}.card p,.card li{color:var(--muted);line-height:1.55}.card ul{margin:8px 0 0;padding-left:20px}.soft{background:linear-gradient(135deg,rgba(200,146,42,.18),rgba(12,30,58,.04));border-color:rgba(200,146,42,.28)}.danger{background:linear-gradient(135deg,rgba(190,58,52,.11),rgba(200,146,42,.06));border-color:rgba(190,58,52,.25)}
+.progress-meta{display:flex;justify-content:space-between;gap:10px;align-items:center;margin:10px 0 8px;color:var(--muted);font-size:13px}.progress-meta b{color:var(--text)}.progress{height:18px;background:rgba(102,112,133,.18);border-radius:99px;overflow:hidden;margin:8px 0 12px;box-shadow:inset 0 2px 6px rgba(0,0,0,.10);position:relative}.progress:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0,transparent calc(11.111% - 2px),rgba(255,255,255,.55) calc(11.111% - 2px),rgba(255,255,255,.55) 11.111%);pointer-events:none}.dark .progress:after{background:repeating-linear-gradient(90deg,transparent 0,transparent calc(11.111% - 2px),rgba(7,20,40,.55) calc(11.111% - 2px),rgba(7,20,40,.55) 11.111%)}.bar{height:100%;width:0;background:var(--bar-color,#d93636);border-radius:99px;transition:width .38s ease, background-color .35s ease, filter .3s ease;position:relative}.bar:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);transform:translateX(-100%);animation:shine 2.6s infinite}.bar.complete{filter:drop-shadow(0 0 10px rgba(34,197,94,.55))}@keyframes shine{to{transform:translateX(100%)}}.celebration{position:fixed;inset:0;pointer-events:none;z-index:80;overflow:hidden}.confetti{position:absolute;top:-20px;font-size:22px;animation:fall 1.8s linear forwards}@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.15}}.congrats{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%) scale(.94);z-index:90;background:linear-gradient(145deg,#071428,#0c2345);color:white;border:1px solid rgba(245,208,120,.4);box-shadow:0 26px 70px rgba(0,0,0,.42);border-radius:26px;padding:22px;width:min(90%,390px);text-align:center;opacity:0;pointer-events:none;transition:.25s}.congrats.show{opacity:1;transform:translate(-50%,-50%) scale(1);pointer-events:auto}.congrats h3{font-family:Georgia,serif;font-size:24px;margin:0 0 10px;color:#f7d77e}.congrats p{margin:0;color:#e6edf6;line-height:1.45}.congrats button{margin-top:16px;border:0;border-radius:16px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#071428;font-weight:900;padding:12px 18px}.check{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);border-radius:17px;padding:12px;margin:9px 0;background:rgba(255,255,255,.40)}.dark .check{background:rgba(255,255,255,.04)}.check input{width:22px;height:22px;min-width:22px;flex:0 0 22px;accent-color:var(--gold);margin-top:1px}.check.done label{text-decoration:line-through;color:var(--muted)}
+.tilegrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.topicgrid{margin-bottom:14px}.tile{border:1px solid var(--line);background:rgba(255,255,255,.45);border-radius:20px;padding:14px;text-decoration:none;color:var(--text);min-height:104px;display:flex;flex-direction:column;justify-content:space-between;text-align:left;font:inherit;cursor:pointer}.dark .tile{background:rgba(255,255,255,.05)}.tile b{font-size:15px}.tile small{color:var(--muted);line-height:1.35}.tile .emoji{font-size:26px}
+.pillrow{display:flex;gap:8px;overflow:auto;padding-bottom:4px}.pill{white-space:nowrap;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:10px 13px;font-size:13px;box-shadow:0 8px 22px rgba(10,20,35,.08)}.pill.active{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#061121;font-weight:800}
+.accordion{overflow:hidden;padding:0}.acc-head{width:100%;border:0;background:transparent;color:var(--text);padding:16px;text-align:left;display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:16px;font-weight:800}.acc-head small{display:block;color:var(--muted);font-weight:500;margin-top:4px}.acc-body{display:none;border-top:1px solid var(--line);padding:0 16px 16px}.accordion.open .acc-body{display:block}.chev{transition:.2s}.accordion.open .chev{transform:rotate(180deg)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.action{border:1px solid var(--line);background:linear-gradient(180deg,var(--card),rgba(255,255,255,.72));color:var(--text);text-decoration:none;border-radius:18px;padding:14px;display:flex;flex-direction:column;gap:4px;font-weight:800;text-align:left}.dark .action{background:rgba(255,255,255,.06)}.action small{font-weight:500;color:var(--muted)}
+.faqitem{border:1px solid var(--line);border-radius:18px;padding:13px;margin:9px 0;background:rgba(255,255,255,.36)}.dark .faqitem{background:rgba(255,255,255,.04)}.faqitem b{display:block;margin-bottom:4px}.tag{display:inline-flex;align-items:center;gap:4px;border:1px solid rgba(200,146,42,.25);color:#6f4c09;background:rgba(245,208,120,.25);padding:5px 8px;border-radius:999px;font-size:11px;font-weight:800}.dark .tag{color:#f7d77e;background:rgba(245,208,120,.10)}
+.bottomnav{position:fixed;left:50%;transform:translateX(-50%);bottom:0;width:min(540px,100%);padding:10px 10px calc(10px + var(--safe-bottom));background:rgba(255,253,248,.88);border-top:1px solid var(--line);backdrop-filter:blur(18px);display:grid;grid-template-columns:repeat(5,1fr);gap:6px;z-index:20}.dark .bottomnav{background:rgba(3,10,20,.90)}.navbtn{border:0;background:transparent;color:var(--muted);border-radius:16px;padding:8px 4px;font-size:11px;display:flex;flex-direction:column;align-items:center;gap:3px}.navbtn b{font-size:19px}.navbtn.active{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#061121;font-weight:800}
+.toast{position:fixed;left:50%;top:50%;transform:translate(-50%,-40%);opacity:0;pointer-events:none;background:#071428;color:white;border:1px solid rgba(245,208,120,.25);border-radius:18px;padding:12px 16px;box-shadow:0 18px 40px rgba(0,0,0,.28);transition:.25s;z-index:30;width:min(92%,420px);text-align:center}.toast.show{opacity:1;transform:translate(-50%,-50%)}.empty{padding:24px;text-align:center;color:var(--muted)}
+.home-title{margin-top:4px}.home-only{margin-bottom:18px}.home-only .tile{min-height:118px}
+.view-head{display:flex;align-items:center;gap:10px;margin:4px 0 14px}.backbtn{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:16px;padding:10px 12px;font-weight:900;box-shadow:0 8px 22px rgba(10,20,35,.08)}.view-head h2{font-family:Georgia,serif;margin:0;font-size:22px}.home-only .tile{transition:transform .18s ease, box-shadow .18s ease}.home-only .tile:active{transform:scale(.98)}
+@media(min-width:700px){body{padding-top:20px}.hero{border-radius:34px;margin:0 12px}.bottomnav{border-radius:24px 24px 0 0}}
+
+.featured-tile{background:linear-gradient(135deg,rgba(245,208,120,.28),rgba(255,255,255,.52));border-color:rgba(200,146,42,.36)}
+.dark .featured-tile{background:linear-gradient(135deg,rgba(245,208,120,.14),rgba(255,255,255,.05))}
+.check-hint{margin:2px 0 12px;color:var(--muted);font-size:13px;line-height:1.45}.check-hint b{color:var(--text)}
+.medal{width:72px;height:72px;margin:0 auto 12px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 30% 25%,#fff4b8,#f7d77e 38%,#c8922a 68%,#80520b);color:#071428;font-size:36px;box-shadow:0 14px 34px rgba(200,146,42,.42), inset 0 2px 0 rgba(255,255,255,.45);animation:popMedal .55s ease both}
+@keyframes popMedal{0%{transform:scale(.72) rotate(-12deg);opacity:0}70%{transform:scale(1.08) rotate(4deg);opacity:1}100%{transform:scale(1) rotate(0)}}
+.congrats .welcome{display:block;color:#f7d77e;font-weight:900;margin-bottom:8px;font-size:13px;text-transform:uppercase;letter-spacing:.12em}
+.gallery-ready{display:none}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="hero" id="inicio">
+  <div class="toprow">
+    <div class="brand"><div class="logo">P</div><div><div class="eyebrow">Condomínio Edifício Primavera</div><h1>Primavera Fácil</h1></div></div>
+    <button class="iconbtn" id="themeBtn" aria-label="Alternar tema">☾</button>
+  </div>
+</header>
+<main class="wrap">
+  <div class="section-title home-title"><h2>Escolha um assunto</h2><span>início rápido</span></div>
+  <section class="tilegrid topicgrid home-only item" data-tags="índice atalhos mycond horários regulamento contatos lixo pets garagem dúvidas segurança documentos checklist água crianças reciclagem">
+    <button class="tile featured-tile" data-view="primeiros"><span class="emoji">✅</span><b>Primeiros passos</b><small>Checklist • Integração • Boas-vindas</small></button>
+    <button class="tile" data-view="mycond"><span class="emoji">📲</span><b>MyCond</b><small>Acesso • Reservas • Avisos</small></button>
+    <button class="tile" data-view="horarios"><span class="emoji">⏰</span><b>Horários</b><small>Silêncio • Reformas • Mudanças</small></button>
+    <button class="tile" data-view="garagem"><span class="emoji">🚗</span><b>Garagem</b><small>Vagas • Portão • Visitantes</small></button>
+    <button class="tile" data-view="pets"><span class="emoji">🐾</span><b>Pets</b><small>Coleira • Dejetos • Convivência</small></button>
+    <button class="tile" data-view="criancas"><span class="emoji">🧒</span><b>Crianças</b><small>Supervisão • Quadra • Playground</small></button>
+    <button class="tile" data-view="lixo"><span class="emoji">♻️</span><b>Reciclagem</b><small>Lixo • Óleo • Volumosos</small></button>
+    <button class="tile" data-view="agua"><span class="emoji">💧</span><b>Água</b><small>Banho • Torneira • Economia</small></button>
+    <button class="tile" data-view="documentos"><span class="emoji">📚</span><b>Regulamento</b><small>Direitos • Deveres • Penalidades</small></button>
+    <button class="tile" data-view="seguranca"><span class="emoji">🛡️</span><b>Segurança</b><small>Emergência • Portão • Golpes</small></button>
+    <button class="tile" data-view="contatos"><span class="emoji">📌</span><b>Contatos</b><small>Portaria • Equipe • Endereço</small></button>
+    <button class="tile" data-view="faq"><span class="emoji">❓</span><b>FAQ</b><small>Respostas • Regras • Atalhos</small></button>
+  </section>
+
+  <div class="searchbox"><span>🔎</span><input id="search" placeholder="Buscar: pets, reforma, garagem, lixo, salão..." autocomplete="off"></div>
+  <div class="section-title"><h2>Conteúdo do guia</h2><span>explicações completas</span></div>
+
+  <section class="card item" id="primeiros" data-tags="checklist primeiros passos ficha cadastral telefone mycond regulamento biometria lixeiras visitantes recicláveis silêncio reformas">
+    <h3>✅ Checklist do novo morador</h3>
+    <p>Marque o que já foi feito. O progresso fica salvo apenas neste aparelho.</p>
+    <div class="progress-meta"><span id="progressCount"><b>0</b> de 9 etapas</span><span id="progressText">0% concluído</span></div><div class="progress"><div class="bar" id="progressBar"></div></div><p class="check-hint" id="checkHint">Complete as etapas para concluir sua integração ao Primavera.</p><div id="checklistItems"></div>
+  </section>
+
+  <section class="card accordion item" id="mycond" data-tags="mycond app aplicativo senha inicial 12345 login telefone reservas salão festas ficha cadastral">
+    <button class="acc-head"><span>📲 MyCond: primeiro acesso<small>Canal oficial de comunicação e reservas</small></span><span class="chev">⌄</span></button>
+    <div class="acc-body"><ul><li>Entregue a ficha cadastral na portaria.</li><li>A administração cadastra seu telefone no sistema.</li><li>Baixe o MyCond na Play Store ou App Store.</li><li>Na tela inicial, toque em “Já usei este app antes”.</li><li>Usuário: seu celular com DDD.</li><li>Senha inicial: <b>12345</b>. Depois altere a senha.</li></ul></div>
+  </section>
+
+  <section class="card accordion item" id="salao" data-tags="salão festas reserva mycond horário capacidade limpeza som danos convidados">
+    <button class="acc-head"><span>🎉 Reserva do salão<small>Solicitação pelo MyCond</small></span><span class="chev">⌄</span></button>
+    <div class="acc-body"><ul><li>Acesse MyCond → Reservas → Salão de Festas.</li><li>Escolha uma data disponível e envie a solicitação.</li><li>A confirmação depende de análise da administração.</li><li>Respeite horários, capacidade, limpeza e volume do som.</li><li>Danos ao espaço são cobrados do responsável pela reserva.</li></ul></div>
+  </section>
+
+  <section class="card accordion item" id="horarios" data-tags="horários silêncio reformas playground quadra mudanças 22h 8h sábado domingo">
+    <button class="acc-head"><span>⏰ Horários importantes<small>O que o novo morador mais consulta</small></span><span class="chev">⌄</span></button>
+    <div class="acc-body"><ul><li><b>Silêncio:</b> 22h às 8h.</li><li><b>Reformas:</b> segunda a sexta, 8h às 17h; sábado, 9h às 16h.</li><li><b>Playground e quadra:</b> seg. a sex. 8h às 22h; sáb./dom. 9h às 22h.</li><li><b>Mudanças:</b> seg. a sex. 8h às 17h; sábado 9h às 16h.</li></ul></div>
+  </section>
+
+  <div class="section-title" id="convivencia"><h2>Convivência</h2><span>regras em linguagem simples</span></div>
+  <section class="card accordion item" id="acesso" data-tags="acesso visitantes prestadores encomendas biometria telefone portaria mycond">
+    <button class="acc-head"><span>🚪 Acesso, visitantes e encomendas<small>Mantenha seus dados atualizados</small></span><span class="chev">⌄</span></button>
+    <div class="acc-body"><ul><li>Biometria facial é opcional, mas recomendada.</li><li>A portaria libera visitantes por contato com o telefone cadastrado.</li><li>Encomendas são avisadas pelo MyCond.</li><li>Atualize seu telefone para evitar problemas de liberação.</li></ul></div>
+  </section>
+
+  <section class="card accordion item" id="garagem" data-tags="garagem vaga visitante buzina portão objetos móveis entulho velocidade">
+    <button class="acc-head"><span>🚗 Garagem<small>Uso correto das vagas e do portão</small></span><span class="chev">⌄</span></button>
+    <div class="acc-body"><ul><li>Visitantes devem usar a vaga do apartamento visitado.</li><li>Nunca use vaga de outro morador sem autorização.</li><li>Não buzine para abrir o portão.</li><li>Não deixe objetos, móveis ou entulho na garagem.</li><li>Velocidade máxima recomendada no regulamento: 10 km/h.</li></ul></div>
+  </section>
+
+  <section class="card accordion item" id="pets" data-tags="pets animais cachorro gato coleira dejetos latidos alergia medo">
+    <button class="acc-head"><span>🐾 Pets<small>Cuidado, higiene e respeito aos vizinhos</small></span><span class="chev">⌄</span></button>
+    <div class="acc-body"><ul><li>Circule sempre com coleira.</li><li>Recolha os dejetos imediatamente.</li><li>Evite latidos excessivos, principalmente à noite.</li><li>Respeite moradores com alergia, medo ou restrições.</li></ul></div>
+  </section>
+
+  <section class="card accordion item" id="barulho" data-tags="barulho silêncio sossego convivência móveis arrastados crianças tapetes música alta">
+    <button class="acc-head"><span>🔇 Barulho e sossego<small>Convivência também durante o dia</small></span><span class="chev">⌄</span></button>
+    <div class="acc-body"><ul><li>Evite arrastar móveis e usar salto/tamanco em excesso.</li><li>Evite música alta e gritos nas áreas comuns.</li><li>Use tapetes para reduzir ruídos de impacto.</li><li>Mesmo fora do horário de silêncio, barulho excessivo pode incomodar.</li></ul></div>
+  </section>
+
+  <section class="card accordion item" id="criancas" data-tags="crianças playground quadra escadas rampas corredores garagem supervisão adulto funcionários">
+    <button class="acc-head"><span>🧒 Crianças<small>Áreas permitidas e supervisão</small></span><span class="chev">⌄</span></button>
+    <div class="acc-body"><ul><li>Áreas permitidas: playground e quadra.</li><li>Sempre com supervisão de um adulto.</li><li>Não brincar em escadas, rampas, corredores e garagem.</li><li>Funcionários não podem cuidar de crianças.</li></ul></div>
+  </section>
+
+  <section class="card accordion item" id="lixo" data-tags="lixo reciclagem recicláveis óleo entulho volumosos bitucas janela containers lixeiras ecoponto cata bagulho">
+    <button class="acc-head"><span>♻️ Lixo, reciclagem e descartes<small>Separar corretamente evita problemas</small></span><span class="chev">⌄</span></button>
+    <div class="acc-body"><ul><li>Use as lixeiras corretas.</li><li>Recicláveis devem ir nos containers específicos.</li><li>Nunca jogue bitucas, papéis, embalagens ou objetos pela janela.</li><li>Óleo usado: tambor azul próximo aos recicláveis.</li><li>Entulho: caçamba contratada pelo morador.</li><li>Volumosos: Cata-Bagulho ou Ecoponto.</li></ul></div>
+  </section>
+
+  <section class="card accordion item" id="agua" data-tags="água uso consciente banho torneira vaso máquina lavar economia litros">
+    <button class="acc-head"><span>💧 Uso consciente da água<small>Pequenas atitudes ajudam todos</small></span><span class="chev">⌄</span></button>
+    <div class="acc-body"><ul><li>Prefira banhos de até 5 minutos.</li><li>Feche a torneira ao escovar os dentes.</li><li>Não use o vaso sanitário como lixeira.</li><li>Use máquinas de lavar sempre cheias.</li></ul></div>
+  </section>
+
+  <section class="card accordion item" id="reformas" data-tags="reformas nbr 16280 art rrt pintura pequenos reparos rede proteção martelete elétrica hidráulica sábado">
+    <button class="acc-head"><span>🛠️ Reformas<small>Comunique antes de iniciar</small></span><span class="chev">⌄</span></button>
+    <div class="acc-body"><p><b>Exige ART/RRT:</b></p><ul><li>Quebra de paredes.</li><li>Troca de pisos com martelete.</li><li>Alterações elétricas.</li><li>Alterações hidráulicas com impacto.</li></ul><p><b>Não costuma exigir:</b> pintura, pequenos reparos e instalação de rede de proteção. Mesmo assim, comunique a administração.</p></div>
+  </section>
+
+  <section class="card danger item" id="seguranca" data-tags="segurança emergência samu bombeiros polícia defesa civil golpe maquininha presente falso cartão portão chaves prestadores">
+    <h3>🛡️ Segurança e emergência</h3>
+    <div class="contact-grid">
+      <a class="action" href="tel:192">SAMU<small>192</small></a>
+      <a class="action" href="tel:193">Bombeiros<small>193</small></a>
+      <a class="action" href="tel:190">Polícia Militar<small>190</small></a>
+      <a class="action" href="tel:199">Defesa Civil<small>199</small></a>
+    </div>
+    <ul><li>Não autorize entrada de desconhecidos.</li><li>Não deixe o portão aberto.</li><li>Não entregue chaves na portaria sem autorização.</li><li>Nunca passe cartão sem conferir o valor na maquininha.</li></ul>
+  </section>
+
+
+
+  <section class="card item" id="contatos" data-tags="contatos telefone portaria email endereço sindico subsindica equipe emergência samu bombeiros policia defesa civil">
+    <h3>📌 Contatos e equipe</h3>
+    <div class="contact-grid">
+      <a class="action" href="tel:+551156169831">Portaria<small>(11) 5616-9831</small></a>
+      <a class="action" href="mailto:condominioprimavera247@gmail.com">E-mail<small>Administração</small></a>
+      <button class="action" onclick="copyText('Rua Antônio do Campo, 247 – Pedreira – São Paulo – SP')">Endereço<small>Copiar endereço</small></button>
+      <button class="action" onclick="copyText('condominioprimavera247@gmail.com')">Copiar e-mail<small>Primavera</small></button>
+    </div>
+    <p><b>Equipe:</b> Síndico Carlos · Subsíndica Olinda · Portaria dia Waldir e Alex · Portaria noite Rivaldo e Rafael · Limpeza Valderi.</p>
+  </section>
+
+  <section class="card item" id="faq" data-tags="faq dúvidas perguntas respostas cachorro reforma sábado salão vaga buzina lixo óleo biometria senha mycond multa horário">
+    <h3>❓ Perguntas frequentes</h3>
+    <div class="faqitem"><span class="tag">MyCond</span><b>Qual é a senha inicial?</b><p>12345. Após o primeiro acesso, altere a senha.</p></div>
+    <div class="faqitem"><span class="tag">Reforma</span><b>Posso fazer reforma no sábado?</b><p>Sim, aos sábados das 9h às 16h.</p></div>
+    <div class="faqitem"><span class="tag">Garagem</span><b>Posso usar a vaga de outro morador?</b><p>Não sem autorização prévia do responsável pela vaga.</p></div>
+    <div class="faqitem"><span class="tag">Pets</span><b>Meu pet pode circular solto?</b><p>Não. A circulação deve ser sempre com coleira.</p></div>
+    <div class="faqitem"><span class="tag">Salão</span><b>Como reservo o salão?</b><p>Pelo MyCond, no menu Reservas → Salão de Festas.</p></div>
+    <div class="faqitem"><span class="tag">Descarte</span><b>Onde descarto óleo usado?</b><p>No tambor azul próximo aos recicláveis.</p></div>
+  </section>
+
+  <section class="card item" id="documentos" data-tags="documentos regulamento interno guia morador pdf oficial apoio regras consulta">
+    <h3>📚 Documentos de apoio</h3>
+    <p>O app resume os pontos principais. Para consulta completa, use os documentos oficiais.</p>
+    <div class="tilegrid">
+      <a class="tile" href="guia_morador_primavera15.pdf" target="_blank"><span class="emoji">📘</span><b>Guia do Morador</b><small>PDF de boas-vindas</small></a>
+      <a class="tile" href="regulamento_interno_primavera_2015.pdf" target="_blank"><span class="emoji">📄</span><b>Regulamento</b><small>Documento oficial</small></a>
+    </div>
+  </section>
+
+  <section class="card soft item" id="final" data-tags="final boas vindas administração primavera convívio harmonioso agradável">
+    <h3>🌱 Boa convivência começa no primeiro dia</h3>
+    <p>A administração está à disposição para ajudar no que for necessário. Conte conosco para manter o Primavera um lugar seguro, limpo, harmonioso e agradável para todos.</p>
+  </section>
+  <div class="empty hidden" id="empty">Nenhum resultado encontrado.</div>
+</main>
+</div>
+<nav class="bottomnav">
+  <button class="navbtn active" data-nav="inicio" onclick="showView('inicio',this)"><b>🏠</b>Início</button>
+  <button class="navbtn" data-nav="primeiros" onclick="showView('primeiros',this)"><b>✅</b>Passos</button>
+  <button class="navbtn" data-nav="mycond" onclick="showView('mycond',this)"><b>📲</b>MyCond</button>
+  <button class="navbtn" data-nav="faq" onclick="showView('faq',this)"><b>❓</b>Dúvidas</button>
+  <button class="navbtn" data-nav="documentos" onclick="showView('documentos',this)"><b>📚</b>Docs</button>
+</nav>
+<div class="celebration hidden" id="celebration"></div>
+<div class="congrats" id="congrats"><div class="medal">🏆</div><span class="welcome">Bem-vindo à comunidade Primavera!</span><h3>Parabéns!</h3><p>Você é o tipo de vizinho que todos gostariam de ter.<br><br>Obrigado por contribuir para uma convivência harmoniosa no Condomínio Primavera.</p><button onclick="closeCongrats()">Começar boa convivência</button></div>
+<div class="toast" id="toast"></div>
+<script>
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const storageKey='primaveraFacilBoasVindasChecklistV5';
+const celebrationKey='primaveraFacilBoasVindasCelebrationV7';
+const checks=['Entreguei a ficha cadastral','Atualizei meu telefone na portaria','Baixei o MyCond','Acessei o MyCond e alterei a senha','Li as orientações principais do guia','Consultei os horários de silêncio e reformas','Sei como receber visitantes','Sei onde ficam lixeiras e recicláveis','Conheço as regras básicas de garagem, pets e barulho'];
+function toast(t){const el=$('#toast');el.textContent=t;el.classList.add('show');clearTimeout(window.tid);window.tid=setTimeout(()=>el.classList.remove('show'),2200)}
+function getSavedChecks(){
+  try{
+    const raw=JSON.parse(localStorage.getItem(storageKey)||'[]');
+    return [...new Set(raw.map(Number).filter(n=>Number.isInteger(n)&&n>=0&&n<checks.length))];
+  }catch(e){
+    localStorage.removeItem(storageKey);
+    return [];
+  }
+}
+function renderChecklist(){
+  const saved=getSavedChecks();
+  $('#checklistItems').innerHTML=checks.map((c,i)=>`<div class="check ${saved.includes(i)?'done':''}"><input type="checkbox" id="c${i}" ${saved.includes(i)?'checked':''} onchange="toggleCheck(${i})"><label for="c${i}">${c}</label></div>`).join('');
+  updateProgress(saved);
+}
+function toggleCheck(i){
+  const before=getSavedChecks();
+  const saved=before.includes(i)?before.filter(x=>x!==i):[...before,i];
+  localStorage.setItem(storageKey,JSON.stringify(saved));
+  if(saved.length<checks.length){
+    localStorage.removeItem(celebrationKey);
+    closeCongrats();
+  }
+  renderChecklist();
+}
+function updateProgress(saved=getSavedChecks()){
+  const total=checks.length;
+  const done=saved.length;
+  const pct=total?Math.round((done/total)*100):0;
+  const bar=$('#progressBar');
+  const hue=Math.round((pct/100)*128);
+  const color=pct===100?'#22c55e':`hsl(${hue} 78% 48%)`;
+  bar.style.setProperty('--bar-color',color);
+  requestAnimationFrame(()=>{bar.style.width=pct+'%'});
+  bar.classList.toggle('complete',pct===100);
+  let status='';
+  if(pct===0)status=' — vamos começar?';
+  else if(pct<40)status=' — primeiros passos';
+  else if(pct<75)status=' — no caminho certo';
+  else if(pct<100)status=' — falta pouco';
+  else status=' — tudo pronto!';
+  const count=$('#progressCount');
+  if(count) count.innerHTML=`<b>${done}</b> de ${total} etapas`;
+  $('#progressText').textContent=pct+'%'+status;
+  const hint=$('#checkHint');
+  if(hint){
+    const left=total-done;
+    if(done===0) hint.textContent='Comece marcando a primeira etapa da sua chegada ao Primavera.';
+    else if(left===0) hint.innerHTML='<b>Integração concluída.</b> Obrigado por ajudar a manter uma convivência harmoniosa.';
+    else if(left===1) hint.innerHTML='Falta apenas <b>1 etapa</b> para concluir sua integração ao Primavera.';
+    else hint.innerHTML=`Faltam apenas <b>${left} etapas</b> para concluir sua integração ao Primavera.`;
+  }
+  if(pct===100&&localStorage.getItem(celebrationKey)!=='done'){
+    localStorage.setItem(celebrationKey,'done');
+    celebrate();
+  }
+}
+function celebrate(){const area=$('#celebration');const modal=$('#congrats');area.innerHTML='';area.classList.remove('hidden');const icons=['🎉','✨','🌿','🏡','💛','🎊'];for(let i=0;i<55;i++){const c=document.createElement('span');c.className='confetti';c.textContent=icons[i%icons.length];c.style.left=Math.random()*100+'vw';c.style.animationDelay=(Math.random()*.55)+'s';c.style.fontSize=(16+Math.random()*16)+'px';area.appendChild(c)}setTimeout(()=>modal.classList.add('show'),260);setTimeout(()=>area.classList.add('hidden'),2400)}
+function closeCongrats(){const m=$('#congrats'); if(m)m.classList.remove('show')}
+function copyText(t){navigator.clipboard?.writeText(t);toast('Copiado para a área de transferência')}
+$$('.acc-head').forEach(btn=>btn.addEventListener('click',()=>btn.closest('.accordion').classList.toggle('open')));
+function norm(t){return (t||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
+function applySearch(){const q=norm($('#search').value);let visible=0;$$('.item').forEach(el=>{const text=norm(el.innerText+' '+(el.dataset.tags||''));const show=!q||text.includes(q);el.classList.toggle('hidden',!show);if(show)visible++});$('#empty').classList.toggle('hidden',visible!==0)}
+$('#search').addEventListener('input',applySearch);
+
+const viewMap={
+  inicio:['home'],
+  primeiros:['primeiros'],
+  mycond:['mycond','salao'],
+  horarios:['horarios'],
+  garagem:['garagem'],
+  pets:['pets'],
+  criancas:['criancas'],
+  lixo:['lixo'],
+  agua:['agua'],
+  documentos:['documentos'],
+  seguranca:['seguranca'],
+  contatos:['contatos'],
+  faq:['faq'],
+  acesso:['acesso'],
+  barulho:['barulho'],
+  reformas:['reformas']
+};
+const viewTitles={
+  primeiros:'Primeiros passos',mycond:'MyCond e Salão de Festas',horarios:'Horários importantes',garagem:'Garagem',pets:'Pets',criancas:'Crianças',lixo:'Reciclagem e descartes',agua:'Uso consciente da água',documentos:'Regulamento e documentos',seguranca:'Segurança e emergência',contatos:'Contatos e equipe',faq:'Dúvidas rápidas',acesso:'Acesso e encomendas',barulho:'Barulho e sossego',reformas:'Reformas'
+};
+function setActiveNav(id,btn){$$('.navbtn').forEach(b=>b.classList.remove('active')); if(btn) btn.classList.add('active'); else {const nav=$(`.navbtn[data-nav="${id}"]`); if(nav) nav.classList.add('active'); else $('.navbtn[data-nav="inicio"]')?.classList.add('active')}}
+function showView(id='inicio',btn=null){
+  const isHome=id==='inicio';
+  $('#search').value='';
+  $$('.content-title').forEach(el=>el.classList.add('hidden'));
+  $$('.item').forEach(el=>el.classList.add('hidden'));
+  $('.searchbox')?.classList.add('hidden');
+  $('#empty')?.classList.add('hidden');
+  let head=$('#viewHead');
+  if(!head){head=document.createElement('div');head.id='viewHead';head.className='view-head hidden';head.innerHTML='<button class="backbtn" onclick="showView(\'inicio\')">← Início</button><h2></h2>';document.querySelector('main.wrap').insertBefore(head, document.querySelector('.searchbox'));}
+  head.classList.toggle('hidden',isHome);
+  if(isHome){
+    $('.home-title')?.classList.remove('hidden');
+    $('.home-only')?.classList.remove('hidden');
+  }else{
+    $('.home-title')?.classList.add('hidden');
+    $('.home-only')?.classList.add('hidden');
+    head.querySelector('h2').textContent=viewTitles[id]||'Conteúdo';
+    (viewMap[id]||[id]).forEach(key=>document.getElementById(key)?.classList.remove('hidden'));
+    $$('.accordion:not(.open)').forEach(a=>{ if(!a.classList.contains('hidden')) a.classList.add('open'); });
+  }
+  setActiveNav(id,btn);
+  document.querySelector('.app')?.scrollIntoView({behavior:'smooth',block:'start'});
+  history.replaceState(null,'','#'+id);
+}
+$$('.home-only .tile[data-view]').forEach(card=>card.addEventListener('click',()=>showView(card.dataset.view)));
+
+$('#themeBtn').onclick=()=>{document.body.classList.toggle('dark');localStorage.setItem('primaveraThemeV5',document.body.classList.contains('dark')?'dark':'light');$('#themeBtn').textContent=document.body.classList.contains('dark')?'☀':'☾'};
+if(localStorage.getItem('primaveraThemeV5')==='dark'){document.body.classList.add('dark');$('#themeBtn').textContent='☀'}
+$$('main > .section-title:not(.home-title)').forEach(el=>el.classList.add('content-title'));
+renderChecklist();
+showView((location.hash||'#inicio').replace('#','')||'inicio');
+</script>
+</body>
+</html>
